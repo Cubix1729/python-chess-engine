@@ -44,7 +44,7 @@ Regarding the search logic, it uses:
  - [Quiescence search](https://www.chessprogramming.org/Quiescence_Search) for captures, checks and promotions
  - A [transposition table](https://www.chessprogramming.org/Transposition_Table) for caching previous search results
  - [Null-move pruning](https://www.chessprogramming.org/Null_Move_Pruning)
- - [Late move reductions]()
+ - [Late move reductions](https://www.chessprogramming.org/Late_Move_Reductions)
  - **Move ordering**:
      - Captures sorting with [MVV-LVA](https://www.chessprogramming.org/MVV-LVA) (Most Valuable Victim - Least Valuable Attacker)
      - [Killer move heuristic](https://www.chessprogramming.org/Killer_Heuristic)
@@ -71,7 +71,7 @@ This is very low, and causes the engine to miss most long-term strategies.
 
 According to me, the main two reasons the depth is quite low are:
 
- - **The lack of pruning**: techniques like [Late move reduction (LMR)](https://www.chessprogramming.org/Late_Move_Reductions) or [Principal variation search (PVS)](https://www.chessprogramming.org/Principal_Variation_Search)
+ - **The lack of pruning**: techniques like [Aspiration Search](https://www.chessprogramming.org/Aspiration_Windows) or [Principal variation search (PVS)](https://www.chessprogramming.org/Principal_Variation_Search)
  could probably increase the search efficiency
  - **The lack of optmisation**: Python isn't particularly fast (even if the Lichess version runs on PyPy),
  and the engine does not use efficient techniques like bitboards
